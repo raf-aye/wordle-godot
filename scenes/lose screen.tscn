@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdu8bmp6rs4d0"]
+
+[ext_resource type="Script" path="res://scripts/set_lose_word.gd" id="1_pvhj2"]
+[ext_resource type="FontFile" uid="uid://dxasabt171loj" path="res://fonts/Satoshi-Medium.ttf" id="2_ldmem"]
+[ext_resource type="Texture2D" uid="uid://gtkka88c85q0" path="res://textures/background.tres" id="3_r60pt"]
+[ext_resource type="Script" path="res://scripts/play_again.gd" id="4_58qln"]
+
+[node name="LoseScreen" type="Node2D"]
+script = ExtResource("1_pvhj2")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 891.0
+offset_top = 116.0
+offset_right = 1692.0
+offset_bottom = 349.0
+theme_override_colors/font_color = Color(0.945373, 0.0789615, 1.92523e-07, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 13
+theme_override_fonts/font = ExtResource("2_ldmem")
+theme_override_font_sizes/font_size = 186
+text = "You Lost!"
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(1382, 1247)
+scale = Vector2(46.039, 46.039)
+texture = ExtResource("3_r60pt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1272, 560)
+zoom = Vector2(0.51, 0.51)
+limit_smoothed = true
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+offset_left = 909.0
+offset_top = 761.0
+offset_right = 1646.0
+offset_bottom = 969.0
+theme_override_colors/font_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.226708, 0.226707, 0.226707, 1)
+theme_override_constants/icon_max_width = 6
+theme_override_font_sizes/font_size = 146
+text = "Play Again"
+script = ExtResource("4_58qln")
+
+[node name="Label2" type="Label" parent="."]
+z_index = 1
+offset_left = 700.0
+offset_top = 326.0
+offset_right = 1860.0
+offset_bottom = 559.0
+theme_override_colors/font_color = Color(0.945373, 0.0789615, 1.92523e-07, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 13
+theme_override_fonts/font = ExtResource("2_ldmem")
+theme_override_font_sizes/font_size = 71
+text = "The word was \"XXXX\""
+horizontal_alignment = 1
+vertical_alignment = 1

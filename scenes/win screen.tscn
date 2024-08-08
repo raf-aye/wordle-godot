@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsg4c75k4bws5"]
+
+[ext_resource type="FontFile" uid="uid://dxasabt171loj" path="res://fonts/Satoshi-Medium.ttf" id="1_wf4ud"]
+[ext_resource type="Texture2D" uid="uid://gtkka88c85q0" path="res://textures/background.tres" id="2_qv6l3"]
+[ext_resource type="Script" path="res://scripts/play_again.gd" id="3_4pb4m"]
+
+[node name="WinScreen" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 860.0
+offset_top = 116.0
+offset_right = 1661.0
+offset_bottom = 349.0
+theme_override_colors/font_color = Color(6.49765e-06, 0.798343, 3.85046e-07, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 13
+theme_override_fonts/font = ExtResource("1_wf4ud")
+theme_override_font_sizes/font_size = 186
+text = "You Won!"
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(1382, 1247)
+scale = Vector2(46.039, 46.039)
+texture = ExtResource("2_qv6l3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1272, 560)
+zoom = Vector2(0.51, 0.51)
+limit_smoothed = true
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+offset_left = 895.0
+offset_top = 760.0
+offset_right = 1632.0
+offset_bottom = 968.0
+theme_override_colors/font_hover_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.226708, 0.226707, 0.226707, 1)
+theme_override_constants/icon_max_width = 6
+theme_override_font_sizes/font_size = 146
+text = "Play Again"
+script = ExtResource("3_4pb4m")
